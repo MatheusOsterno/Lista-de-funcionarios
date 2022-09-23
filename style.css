@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(218, 119, 13);
+}
+
+main {
+    text-align: center;
+    padding: 45px;
+}
+
+
+main table {
+    margin: auto;
+    font-size: 14px;
+}
+
+main td, main th {
+    padding: 8px;
+    border-collapse: collapse;
+}
+
+main th {
+    border-bottom: 1px solid lightgrey;
+}
+
+main p {
+    margin-top: 0px;
+}
+
+main form input,
+main form select {
+    height: 24px;
+    width: 240px;
+    box-sizing: border-box;
+}
+
+main form label {
+    font-size: 12px;
+}
+
+section.add-more {
+    background-color: rgb(241, 241, 241);
+    padding: 40px;
+    margin-top: 40px;
+}
+
+
