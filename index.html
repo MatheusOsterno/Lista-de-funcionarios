@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>Lista de Funcionários</title>
+    </head>
+
+    <body>
+        
+        <main id="app">
+
+
+            <h1>
+                Lista de Funcionários
+            </h1>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Cargo</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr v-for="member in members">
+                    <td>{{member.fname}}</td>
+                    <td>{{member.lname}}</td>
+                    <td>{{member.cargo}}</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <section class="add-more">
+                <p>Adicionar funcionários</p>
+                <form>
+                
+                <label for="fname">Nome:</label><br>
+                <input type="text" id="fname" name="fname" v-model="newMember.fname" ><br>
+                
+                <label for="lname">Sobrenome:</label><br>
+                <input type="text" id="lname" name="lname" v-model="newMember.lname"><br>
+
+                <label for="cargo">Cargo:</label><br>
+                <select name="cargo" id="cargo" v-model="newMember.cargo">
+                    <option value="Estagiário">Estagiário</option>
+                    <option value="Desnvolvedor Jr">Desnvolvedor Jr</option>
+                    <option value="Desenvolvedor Pleno">Desenvolvedor Pleno</option>
+                    <option value="Desenvolvedor Senior">Desenvolvedor Senior</option>
+                    </select>
+                    <br><br>
+                <input type="button" value="Adicionar" @click="addFuncionario()">
+                </form> 
+            </section>
+
+        </main>
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="scripts.js"></script>
+    </body>
+
+</html>
